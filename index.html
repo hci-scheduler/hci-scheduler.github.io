@@ -7,25 +7,68 @@
 	<div class="container">
 		<h1 class="text-center">Schedule Squid</h1>
 		<h1 class="text-center"><small>A class scheduler that doubles as a homework planner.</small></h1>
-		<a href="HCIProjectProposal.pdf"><p class="text-center">PDF Link</p></a>
-		<h2>Team</h2>
-		<p>Matthew Garvin</p>
-		<p>Matthew Riley</p>
-		<p>Sanders Lauture</p>
-		<p>Stephanie Nguyen</p>
-		<h2>Problem</h2>
+		<a href="HCIRequirementsAnalysis.pdf"><p class="text-center">PDF Link</p></a>
+		<h1 class="text-center">Requirements Analysis</h1>
+		<h2>User Analysis</h2>
+		<h3>Primary Stakeholders</h3>
 		<p>
-			A lot of students have issues keeping their life together - and who could blame them? College presents a whole new world with so many things to do and people to schedule meetings with. The main issue is that students often forget that they should be putting things in their calendar - something that seems trivial but is so often forgotten. Our application aims to solve common issues that users have with schedulers, such as poor layout or ugly design. In addition, we want to address a problem that is equally as important, which is reminding users that they should actually be USING the scheduler to their advantage, instead of forgetting to write things down.
+			For our scheduler, the primary stakeholders would be students, and more specifically, Northeastern students. Our calendar will be an easily accessible online app - which is great for students because they can get to it on their phones or computers at any time without having to download anything. In addition, it will provide options for Northeastern-specific locations (such as certain buildings on campus - something most calendars do not provide), along with co-op related actions (like scheduling co-op advisor meetings or interviews). The scheduler will also have more general tasks that are best used for students, such as homework reminders and class scheduling.
 		</p>
-		<h2>Target User</h2>
+		<h3>Tertiary Stakeholders</h3>
 		<p>
-			Our application will be useful for any student, but our main target users will be college students. College students’ schedules can get quite hectic when juggling classes, work, and extra-curricular activities. Their typical planners can get cluttered and be overwhelming to look at. Our application will help solve some of these problems. It will show the student’s class schedule so that they know what classes they will be going to, and also the homeworks due for all their classes. Having a planner where they can easily view when their assignments are due and getting reminders to actually do their homework, will help them to better schedule their time around their classwork. Ultimately, our application will provide a way for busy students to not only keep organized, but to also better manage their time. 
+			The tertiary stakeholders in our plan would be the teachers and advisors of the students who use our application. They would hopefully see the direct benefits of teaching students who are exceptionally organized and on top of their assignments and meetings. In turn, there would be less missed homeworks, less forgotten meetings, and less classes skipped as a whole from all the students who use our app, directly benefitting those who teach them.
 		</p>
-		<h2>Solution</h2>
+		<h2>Personas</h2>
 		<p>
-			Our solution is a scheduling application intended to help students remove the clutter from their schedules and become more organized.  This will be a desktop application built using Java.  Using our application, users would be able to see their class schedule for the week, complete with information such as the class names, times, and locations.  On a sidebar users would a list of homework assignments organized by course.  Here they could add new assignments, or view descriptions of the assignments they have.  They would also have the ability to display an assignment (or assignments) on the calendar, showing the dates that they’re due.  After a user has gone to a class on their schedule, the application will prompt them to add any new assignments they may have been given.  Users would also be able to set reminders for themselves to start assignments, either based on a desired time or something like “3 days before this assignment is due”.  Ideally, our application built with college students in mind would make it easier for those students to keep themselves organized than a more general planner.
+			Rebecca is a 19 year old student at Northeastern University, currently studying Math with a minor in Journalism. It is her second year here at Northeastern.
 		</p>
-		
+		<h3>Background</h3>
+		<p>
+			Rebecca has always been interested in math and writing ever since high school, where she was simultaneously on the math team and wrote for the school newspaper. She got mostly A’s and was able to effortlessly juggle school and extracurricular activities. Rebecca decided that Northeastern was the best choice for her, as the co-op program along with the offered majors was perfect for her interests. In addition, a lot of the clubs and extracurriculars at Northeastern were really appealing to her. Since coming to Northeastern, she has had a lot more trouble with balancing her school work and meetings along with other activities - which is something she hopes to rectify.
+		</p>
+		<h3>Computer Usage</h3>
+		<p>
+			She is by no means an amazing computer user. Rebecca can find her way around most websites and applications as a result of being young and growing up in this age of technology, but she is not well versed on dealing with complex interfaces or doing any sort of programming. She feels most comfortable with sleek, modern interfaces, such as Facebook, Twitter, or Tumblr. As a result, she frequently checks these websites over the course of a day, as they’re easy to access and easy on the eyes.
+		</p>
+		<h3>Goals</h3>
+		<p>
+			Rebecca wishes that she was more organized so that she could fit more activities into her life. She no longer wants to struggle to remember what day a co-op meeting is or what building her next class is located in. In addition, she wants to raise her GPA by ensuring she never misses any assignments, and always knows exactly when her projects are due so she can set aside time in advance for them. She also would like to be very up to date as to when club meetings and gatherings are being held and where, so she can be involved in Northeastern’s community.
+		</p>
+		<h2>Task Analysis</h2>
+		<p>Task 1 - input homework assignment in planner</p>
+		<div class="col-md-12">
+			<img src="content/images/requirements-analysis/image00.png" alt="">
+		</div>
+		<p>Task 2 - input class schedule</p>
+		<div class="col-md-12">
+			<img src="content/images/requirements-analysis/image01.png" alt="">
+		</div>
+		<p>Task 3 - view homework assignments in planner</p>
+		<div class="col-md-12">
+			<img src="content/images/requirements-analysis/image02.png" alt="">
+		</div>
+		<h2>Problem Scenarios</h2>
+		<h3>Task 1</h3>
+		<p>
+			Jack is a middler at Northeastern majoring in chemical engineering.  He is a smart, capable student, but only when he puts in adequate time studying.  Jack lives off-campus for the first time, along with 4 of his friends.  They have a habit of distracting one another from getting work done, so Jack decides to start a planner.  He buys a simple one from the bookstore and starts writing down all his assignments and their due dates.  Jack finds that writing everything down helps him to remember them better than before, but still doesn’t always get his work done because he isn’t accustomed to checking a planner frequently.  He attempts to solve the problem by leaving his planner in places he’ll be forced to see it, such as on top of his laptop or game console, but ultimately still misses assignments from time to time.  Jack hears from his friends that there’s this great new website he can access from both his laptop and his phone that can help him stay organized.  He starts using this instead of his paper planner because he checks his phone and laptop regularly, which is easier for him than forcing himself to write in a planner.  As an added bonus he can just copy and paste his assignment descriptions in the web planner, making it easier to understand the assignment when he sees it later.  
+		</p>
+		<h3>Task 2</h3>
+		<p>
+			Jill is a journalism major at Northeastern in her freshman year.  She hasn’t memorized her schedule yet and finds herself needing to check myneu with an unfortunate regularity.  Despite how frequently she does this, she still makes mistakes occasionally and gets frustrated.  Worse yet, she sometimes arrives at class late because of this.  Jill considers drawing out her schedule on one of her folders so she always has it with her and has easy reference to her schoolwork and schedule at the same time.  Sadly, Jill learns the hard way that this won’t work when the schedule she drew gets smudged all over the inside of her backpack, ruining both her plan and her newly-rented textbook’s cover.  At this point Jill learns of this handy website where she can enter some simple information about her courses once, then reference it again easily.  She doesn’t have to navigate the nightmarish maze of myneu and prefers the website’s calendar view to myneu’s list view.  Plus, after the initial setup (which only took her a few minutes anyway) Jill doesn’t have to do anything but sign in to the website to have all her information displayed conveniently.  She thinks she might even use the site to keep track of her assignments, improving her organization even more.
+		</p>
+		<h3>Task 3</h3>
+		<p>
+			Sean is a junior at Northeastern majoring in Business. He is the president of his fraternity and enjoys going to the gym. His fraternity has many events planned out throughout the year, so he has to attend several meetings a week. He likes to keep organized by writing out when his assignments are due and when his meetings are in his planner. However, with all the coursework and extracurriculars, his planner gets a bit cluttered. It can sometimes be overwhelming for him to look at his planner and seeing all the tasks he has. He wants to keep up his GPA, so he knows he has to prioritize his schoolwork. He decides that it may be smart to have an agenda where he can just view his schoolwork so that he can plan out his daily or weekly activities around the schoolwork he has. This way, Sean is able to make sure that he makes enough time to finish his assignments by the due date. He is also able to make sure he fits in his meetings and gym days in his week as well.
+		</p>
+		<h2>Usability Requirements</h2>
+		<p>
+			Every usability measure is important so that users can easily and successfully use an application but the two most important usability measures for our application are efficiency and learnability. Planning and scheduling classes and assignments should not take a long time, students should be able to quickly and efficiently add a task to their schedule and get on with whatever they were doing. This ties into learnability; if students need to spend a long time learning how to use our application before they can reliably use it they will be less willing to use it. Learnability means that users will quickly pick up on how our application works and efficiency means that users will be able to plan tasks quickly.
+		</p>
+		<p>
+			One usability criteria for our application is that a user will be able to add an event/task to their schedule in under 30 seconds. This should show how efficiently users can use our application. The application should be somewhat smart in how it helps the user plans events. Specifically, for Northeastern students, class times usually do not start at on the hour or half hour but instead start 5 to 10 minutes after. Our application should help the user enter those odd times quickly. The second usability criteria is that new users will score at least a 4 on a 1-7 scale on how well they understand how to use the application for the purpose of scheduling events after 3 minutes of using the application. Users should be able to quickly pick up how to use the application and should be able to start adding events to their schedule after a short period of time.
+		</p>
+		<br>
+		<a href="project-proposal.html">Project Proposal</a>
 	</div>
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

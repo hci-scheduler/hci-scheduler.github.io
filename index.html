@@ -17,6 +17,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="project-proposal.html">P1 - Project Proposal</a></li>
 							<li><a href="requirements-analysis.html">P2 - Requirements Analysis</a></li>
+							<li><a href="conceptual-design.html">P3 - Conceptual Design</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -26,48 +27,49 @@
 	<div class="container">
 		<h1 class="text-center">Schedule Squid</h1>
 		<h1 class="text-center"><small>A class scheduler that doubles as a homework planner.</small></h1>
-		<a href="HCIConceptualDesign.pdf"><p class="text-center">PDF Link</p></a>
-		<h1 class="text-center">Conceptual Design</h1>
-		<h2>Metaphors</h2>
+		<a href="HCIDesignSketches.pdf"><p class="text-center">PDF Link</p></a>
+		<h1 class="text-center">Design Sketches</h1>
+		<h2>Interaction Scenarios & Storyboards</h2>
 		<h3>Problem Scenario 1 - Jack</h3>
 		<p>
-			Inputs tasks scheduler app as they would a notebook. This metaphor is accurate because the app is meant to hold information, namely text, for later reading. However, it can be a bit misleading because there’s a lot more to it than a notebook - there is a lot more functionality to it than just a piece of paper.
+			Jack is sitting in class when his professor announces a new assignment.  Jack opens a new tab in his browser and navigates to his online planner.  After logging in (his browser autofills his credentials to save time) Jack sees a calendar of the month of October, 2015.  Scattered throughout the calendar are various assignments Jack has entered for his classes, appearing in the box corresponding to their due date.  Jack clicks the plus sign near the top of the screen, because he needs to add something new.  A dialog pops up, prompting Jack to enter information including the assignment’s title, due date, course, and description.  When he’s finished, Jack clicks “add to planner” to save his new assignment to the planner.  Later in the day Jack receives a notification from his professor that the due date for the assignment has changed.  Jack returns to his online planner, and clicks on the assignment in the day that it appears (October 28, 2015).  The assignment pops out to an expanded view, showing Jack the details he entered earlier, along with options to edit and delete the assignment.  Jack chooses edit, then modifies the due to date to reflect the professors notification.  When he’s done, he clicks “save changes” to save the update he made to the assignment.
 		</p>
-		<p>
-			Checks app as they would a calendar. This is good because ideally the app would have a calendar-like structure to it. Although a calendar is a stationary physical object that is usually left in one place, whereas the app is to be accessed anywhere.
-		</p>
+		<div class="col-md-12">
+			<img src="content/images/design-sketches/image01.png" alt="">
+		</div>
 		<h3>Problem Scenario 2 - Jill</h3>
 		<p>
-			Jill can check the app and view it as she would a calendar. With a calendar she can see all the events she has on a given day or during the week. However with typical physical calendars day boxes are usually too small to fill in an adequate amount of detail pertaining to a certain event.
+			Jill wakes up Monday morning and wants to look at her class schedule for the week before heading out.  She opens her browser and clicks her bookmark for her online planner.  After logging in, Jill sees her assignments for the month of October, 2015 appear on a calendar.  From a dropdown at the top of the page, Jill unchecks “Assignments” and checks “Courses” to change what she sees displayed on her calendar.  Because her schedule is the same every week, Jill also uses a dropdown menu to change the calendar view from “month” to “week”, so she just sees the current week with all her courses displayed in columns corresponding to the days of the week.  Later in the semester one of Jill’s courses is relocated due to construction.  Jill returns to the previously described view of her courses in her planner following the same steps.  She clicks on the class that’s been moved to get a pop out with an expanded view of the class, showing information such as the course description, time, location, professor, and title.  She selects “edit” near the top of the pop out, and then changes the location to the new one.  When she’s done, she clicks “save changes” to save the update she made to the course.
 		</p>
-		<p>
-			The app provides notifications to events like an alarm. When an event is put into the app, it treats the starting time of an event (in this case, a class) like how an alarm treats the time it’s set to. Alarms typically rely on the fact that they’re annoying and invasive, things our app tries incredibly hard not to be.
-		</p>
+		<div class="col-md-12">
+			<img src="content/images/design-sketches/image00.png" alt="">
+		</div>
 		<h3>Problem Scenario 3 - Sean</h3>
 		<p>
-			Sean can check the app as he would with his paper planner. He would be able to view what events he has planned during the week. He would be able to also add notes about each event to provide details on what that event is about. The app would also be able to to provide a different event views, one for viewing events (classes and meetings), and one for viewing homework providing a less cluttering view when viewing one over another.
+			Sean is in the library on a Saturday morning and wants to get started on his homework before his meeting in two hours. He doesn’t remember which assignment he has due first, so he decides to check his homework planner. He opens up the browser and the login page for his planner immediately shows up because he had set this page as his home page so that he can easily access it. He types in his login credentials. He is then brought to a screen that shows the entire month of October 2015 populated with assignments he has due. He sees that his first assignment due is on Tuesday, October 27 for his Advanced Writing course. He knows because he sees that the date is filled in with a blue block titled “Adv Writing”. It is blue because he had set that class color to be blue. He clicks on the block to see what the assignment is. A small pop up window expands from that date to show Sean his assignment details. He sees that this assignment is titled “Co-op Essay.” In the “Due By” section, he sees the date “Tues, October 27 @ 2:30pm. This is the time his Advanced Writing class starts so he knows he has to turn his paper in before class.  In the “Details” section, he sees that his paper needs to be 5 pages long.  He also sees a link. He clicks on the link and it opens up a new browser tab that brings him to the rubric for the essay. Sean now has all the information he needs to start his assignment. 
 		</p>
-		<p>
-			Sean can check individual events like he would with an appointment card. Appointment cards are used as a reminder for a specific event in time. They provide details on the who, what, where, and when for an event. They however do not provide when of that event in the context of other events that he may have planned. It would be easy to poorly plan a schedule using only appointment cards due to not being able to see the whole picture; all the events Sean had for a given day or week, all at the same time.
-		</p>
-		<h2>Activity Design Scenarios</h2>
-		<p>
-			Jack is middler at Northeastern majoring in chemical engineering.  He has a lot of homework to keep track of, and knows that living with four of his friends can be distracting.  To keep himself organized, Jack uses his online planner to add new assignments as he gets them.  In class, he’ll copy the assignment description and add the due date using his laptop.  Later in the evening, he receives an email on his phone from his professor, saying the due date has been pushed back.  Jack doesn’t have his laptop, but can use the mobile version of his planner on his smartphone to adjust the due date.  It only takes a minute, so Jack gets it done real quick before going back to spending time with his friends.  He’s relieved that he can stay organized so easily using the technology he already has instead of needing to keep a paper planner with him. 
-		</p>
+		<h2>Design Options</h2>
 		<div class="col-md-12">
-			<img src="content/images/conceptual-design/image01.png" alt="">
+			<img src="content/images/design-sketches/image03.jpg" alt="" width="100%" height="100%">
 		</div>
-		<p>
-			Jill is a freshman journalism major at Northeastern.  She’s still learning her way around and frequently needs to remind herself when and where her classes are.  She uses her online planner to keep track of her course schedule.  For each course she’s taking, she clicks through a simple interface to add a new course, then enter relevant information such as the time and location of the course in addition to its title and description.  Jill is pleased to find that entering all this information in her online planner takes her no time at all.  In fact, it takes her even less time than accessing her schedule through the university’s site.  Later in the semester, one of Jill’s classes is relocated due to construction on campus.  Luckily, she can easily edit the information she entered on her online planner, so she adjusts to the change quickly and easily. 
-		</p>
+		<p>This is the most standard design for a calendar application. This view shows the week overview.</p>
+		<br>
 		<div class="col-md-12">
-			<img src="content/images/conceptual-design/image02.png" alt="">
+			<img src="content/images/design-sketches/image05.jpg" alt="" width="100%" height="100%">
 		</div>
-		<p>
-			Sean is a busy junior at Northeastern University. After his last class ends at 4:30pm, he goes to the library to start his homework. He has only 2 hours to get started on homework before his fraternity meeting at 6:30pm. He goes to his online planner and is able to see his class schedule. He sees that the first class he has tomorrow is Advanced Writing. He clicks on the class and sees that his assignment is to write a 5 page essay about his co-op experience that is due next week. In the notes section of the assignment description, he sees a link that he remembers adding in. He clicks on the link and it brings him to the essay grading rubric. Sean is glad that it only took a few seconds to check his homework and that all the information he needed for the assignment was so easy to access. He is now able to take some time to brainstorm and draft out his essay before his meeting.
-		</p>
+		<p>This is a non standard design. It uses a radial design for showing time. Days go around the circle. Time moves outward.</p>
+		<br>
 		<div class="col-md-12">
-			<img src="content/images/conceptual-design/image00.png" alt="">
+			<img src="content/images/design-sketches/image04.jpg" alt="" width="100%" height="100%">
+		</div>
+		<p>This view only shows the days that have actual events on them. This is a concise view of the week but doesn't provide the full context of events.</p>
+		<br>
+		<p>
+			The best design for the main view is probably the first design. Sticking to a traditional calendar design will help users quickly learn how to use the app.
+		</p>
+		<h2>Overall Design</h2>
+		<div class="col-md-12">
+			<img src="content/images/design-sketches/image02.jpg" alt="" width="100%" height="100%">
 		</div>
 	</div>
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>

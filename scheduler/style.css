@@ -7,10 +7,6 @@
     float: right;
 }
 
-#content display {
-    padding: 5px;   
-}
-
-#calendar display {
-    padding: 5px;
+#toolbar {
+ padding: 5px 5px 5px 5px;   
 }

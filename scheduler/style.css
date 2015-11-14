@@ -10,3 +10,11 @@
 #squid {
     align-content: center;   
 }
+
+#contentDisplay {
+   padding: 5px 5px 5px 5px; 
+}
+
+#calendarDisplay {
+    padding: 5px 5px 5px 5px;
+}

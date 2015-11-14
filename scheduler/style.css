@@ -6,3 +6,11 @@
 #add {
     float: right;
 }
+
+#content display {
+    padding: 5px;   
+}
+
+#calendar display {
+    padding: 5px;
+}

@@ -6,6 +6,8 @@ $(function () {
     }
     ];
 
+
+    //TODO: handling course addition
     $('#add').click(function() {
         ev = {
             title: 'asda',
@@ -14,6 +16,8 @@ $(function () {
         };
         $('#calendar').fullCalendar('renderEvent', ev);
     });
+
+    //TODO: handling class addition
 
 	$('#calendar').fullCalendar({
         editable: true,

@@ -4,9 +4,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.css">
 	<link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<!--nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="index.html">Schedule Squid</a>
@@ -27,10 +32,16 @@
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</nav-->
+
+    <div class="container-fluid">
     <img src="squidpicture.png" alt="Schedule Squid" style="width:150px;height:100px;" id="squid">
             <div class="dropdown">
+<<<<<<< HEAD
                 <button class="btn btn-default dropdown-toggle" type="button" id="contentDisplay" data-                                toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+=======
+                <button class="btn btn-default dropdown-toggle" type="button" id="content display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+>>>>>>> origin/master
                 Content View
                 <span class="caret"></span>
                 </button>
@@ -41,7 +52,11 @@
             </div>
     
             <div class="dropdown">
+<<<<<<< HEAD
                 <button class="btn btn-default dropdown-toggle" type="button" id="calendarDisplay" data-                               toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+=======
+                <button class="btn btn-default dropdown-toggle" type="button" id="calendar display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+>>>>>>> origin/master
                 Calendar View
                 <span class="caret"></span>
                 </button>
@@ -52,16 +67,446 @@
                 </ul>
             </div>
 
+<<<<<<< HEAD
             <button class='btn btn-default' id='add'>ADD</button>
         <p>;kad;ajs;djas;</p>
 
 
 	
+=======
+            <div class="modal fade" id="classModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Add a course</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="form-group">
+                            <label for="courseNameInput">Course Name</label>
+                            <input type="text" class="form-control" id="courseNameInput" placeholder="Course Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Time</label>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label>Start</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" id="startTimeHourSelect">
+                                        <option value="12">12</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" id="startTimeMinuteSelect">
+                                        <option value="00">00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        <option value="32">32</option>
+                                        <option value="33">33</option>
+                                        <option value="34">34</option>
+                                        <option value="35">35</option>
+                                        <option value="36">36</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                        <option value="40">40</option>
+                                        <option value="41">41</option>
+                                        <option value="42">42</option>
+                                        <option value="43">43</option>
+                                        <option value="44">44</option>
+                                        <option value="45">45</option>
+                                        <option value="46">46</option>
+                                        <option value="47">47</option>
+                                        <option value="48">48</option>
+                                        <option value="49">49</option>
+                                        <option value="50">50</option>
+                                        <option value="51">51</option>
+                                        <option value="52">52</option>
+                                        <option value="53">53</option>
+                                        <option value="54">54</option>
+                                        <option value="55">55</option>
+                                        <option value="56">56</option>
+                                        <option value="57">57</option>
+                                        <option value="58">58</option>
+                                        <option value="59">59</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" id="startAmRadio" name="startTime">
+                                        am
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" id="startPmRadio" name="startTime">
+                                        pm
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label>End</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" id="endTimeHourSelect">
+                                        <option value="12">12</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" id="endTimeMinuteSelect">
+                                        <option value="00">00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        <option value="32">32</option>
+                                        <option value="33">33</option>
+                                        <option value="34">34</option>
+                                        <option value="35">35</option>
+                                        <option value="36">36</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                        <option value="40">40</option>
+                                        <option value="41">41</option>
+                                        <option value="42">42</option>
+                                        <option value="43">43</option>
+                                        <option value="44">44</option>
+                                        <option value="45">45</option>
+                                        <option value="46">46</option>
+                                        <option value="47">47</option>
+                                        <option value="48">48</option>
+                                        <option value="49">49</option>
+                                        <option value="50">50</option>
+                                        <option value="51">51</option>
+                                        <option value="52">52</option>
+                                        <option value="53">53</option>
+                                        <option value="54">54</option>
+                                        <option value="55">55</option>
+                                        <option value="56">56</option>
+                                        <option value="57">57</option>
+                                        <option value="58">58</option>
+                                        <option value="59">59</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" id="endAmRadio" name="endTime">
+                                        am
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" id="endPmRadio" name="endTime">
+                                        pm
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Meeting Days</label>
+                            <br>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="mondayCheckbox">Mon
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="tuesdayCheckbox">Tue
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="wednesdayCheckbox">Wed
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="thursdayCheckbox">Thu
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="fridayCheckbox">Fri
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="saturdayCheckbox">Sat
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="sundayCheckbox">Sun
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="startDatePicker">Start Date</label>
+                            <input type="text" class="form-control" id="startDatePicker">
+                        </div>
+                        <div class="form-group">
+                            <label for="endDatePicker">End Date</label>
+                            <input type="text" class="form-control" id="endDatePicker">
+                        </div>
+                        <div class="form-group">
+                            <label for="locationInput">Location</label>
+                            <input type="text" id="locationInput" class="form-control" placeholder="Location">
+                        </div>
+                        <div class="form-group">
+                            <label for="professorInput">Professor</label>
+                            <input type="text" id="professorInput" class="form-control" placeholder="Professor">
+                        </div>
+                        <div class="form-group">
+                            <label for="professorEmailInput">Professor's Email</label>
+                            <input type="email" id="professorEmailInput" class="form-control" placeholder="Professor's Email'">
+                        </div>
+                        <div class="form-group">
+                            <label for="classWebsiteInput">Class Website</label>
+                            <input type="url" id="classWebsiteInput" class="form-control" placeholder="Class Website">
+                        </div>
+                        <div class="form-group">
+                            <label for="courseDescriptionTextArea">Course Description</label>
+                            <textarea id="courseDescriptionTextArea" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="assignmentModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Add an assignment</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="courseSelect">Course</label>
+                        <select id="courseSelect" class="form-control">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="assignmentNameInput">Assignment Name</label>
+                        <input type="text" id="assignmentNameInput" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="dueDatePicker">Due Date</label>
+                        <input type="text" class="form-control" id="dueDatePicker">
+                    </div>
+                    <div class="form-group">
+                        <label>Time Due</label>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" id="timeDueHourInput" class="form-control">
+                            </div>
+                            <div class="col-md-1">
+                                <span>:</span>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="timeDueMinuteInput" class="form-control">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="radio-inline">
+                                    <input type="radio" id="timeDueAmRadio" name="dueTime">am
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="timeDuePmRadio" name="dueTime">pm
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="assignmentDetailsTextArea">Assignment Details</label>
+                        <textarea id="assignmentDetailsTextArea" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="reminderDatePicker">Reminder</label>
+                        <input type="text" id="reminderDatePicker" class="form-control">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <label>at</label>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-control" id="reminderHourSelect">
+                                    <option value="12">12</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-control" id="reminderMinuteSelect">
+                                    <option value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    <option value="32">32</option>
+                                    <option value="33">33</option>
+                                    <option value="34">34</option>
+                                    <option value="35">35</option>
+                                    <option value="36">36</option>
+                                    <option value="37">37</option>
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                    <option value="40">40</option>
+                                    <option value="41">41</option>
+                                    <option value="42">42</option>
+                                    <option value="43">43</option>
+                                    <option value="44">44</option>
+                                    <option value="45">45</option>
+                                    <option value="46">46</option>
+                                    <option value="47">47</option>
+                                    <option value="48">48</option>
+                                    <option value="49">49</option>
+                                    <option value="50">50</option>
+                                    <option value="51">51</option>
+                                    <option value="52">52</option>
+                                    <option value="53">53</option>
+                                    <option value="54">54</option>
+                                    <option value="55">55</option>
+                                    <option value="56">56</option>
+                                    <option value="57">57</option>
+                                    <option value="58">58</option>
+                                    <option value="59">59</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="radio-inline">
+                                    <input type="radio" id="reminderAmRadio" name="reminderTime">
+                                    am
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="reminderPmRadio" name="reminderTime">
+                                    pm
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="addReminderButton" class="btn btn-default form-control">Add another reminder</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <button id="classButton" type="button" class="btn btn-default">Add a class</button>
+        <button id="assignmentButton" type="button" class="btn btn-default">Add an assignment</button>
+        </div>
+>>>>>>> origin/master
 	<div id="calendar"></div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.js"></script>
-	<script src="calendar.js"></script>
+    </div>
+    <script src="modal-test.js"></script>
+    <script src="calendar.js"></script>
 </body>
 </html>

@@ -8,9 +8,9 @@ $(function () {
 
 
     //TODO: handling course addition
-    $('#add').click(function() {
+    $('#classSubmit').click(function() {
         ev = {
-            title: 'asda',
+            title: $('#courseNameInput').val(),
             date: '2015-11-13',
             stick: true
         };
@@ -18,7 +18,14 @@ $(function () {
     });
 
     //TODO: handling class addition
-
+    $('#assignSubmit').click(function() {
+        ev = {
+            title: 'asda',
+            date: '2015-11-13',
+            stick: true
+        };
+        $('#calendar').fullCalendar('renderEvent', ev);
+    });
 	$('#calendar').fullCalendar({
         editable: true,
         eventLimit: true,

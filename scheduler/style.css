@@ -17,10 +17,6 @@
     margin-right: auto;
 }
 
-#contentDisplay {
-   padding: 5px 5px 5px 5px; 
-}
-
-#calendarDisplay {
-    padding: 5px 5px 5px 5px;
+#dropdown {
+    padding 5px 5px 5px 5px;   
 }

@@ -35,7 +35,11 @@
 	</nav-->
 
     <div class="container-fluid">
+    <div class="row">
     <img src="squidpicture.png" alt="Schedule Squid" style="width:150px;height:100px;" id="squid">
+    </div>
+        <div class="row">
+        <div class="btn-group-vertical" role="toolbar" aria-label="...">
             <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="content display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Content View
@@ -46,7 +50,6 @@
                 <li><a href="#">Assignments</a></li>
             </ul>
             </div>
-    
             <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="calendar display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Calendar View
@@ -58,8 +61,11 @@
                     <li><a href="#">Month</a></li>
                 </ul>
             </div>
+            <button id="classButton" type="button" class="btn btn-default">Add a class</button>
+            <button id="assignmentButton" type="button" class="btn btn-default">Add an assignment</button>
+            </div>
 
-            <div class="modal fade" id="classModal">
+        <div class="modal fade" id="classModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -484,11 +490,8 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <button id="classButton" type="button" class="btn btn-default">Add a class</button>
-        <button id="assignmentButton" type="button" class="btn btn-default">Add an assignment</button>
-        </div>
 	<div id="calendar"></div>
+    </div>
     </div>
     <script src="modal-test.js"></script>
     <script src="calendar.js"></script>

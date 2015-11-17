@@ -1,4 +1,5 @@
 $(function () {
+
 	$('#startDatePicker').datepicker({
 		todayHighlight: true
 	});
@@ -6,9 +7,11 @@ $(function () {
 		todayHighlight: true
 	});
 	$('#dueDatePicker').datepicker({
+		format: 'yyyy-mm-dd',
 		todayHighlight: true
 	});
 	$('#reminderDatePicker').datepicker({
+		format: 'yyyy-mm-dd',
 		todayHighlight: true
 	});
 });

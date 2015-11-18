@@ -51,7 +51,7 @@ $(function () {
         };
         $('#courseSelect').append('<option value=' + courseName +'>' + courseName + '</option>');
         $('#calendar').fullCalendar('renderEvent', ev);
-
+        resetClassModal();
     });
 
     //TODO: handling class addition
@@ -72,7 +72,7 @@ $(function () {
         console.log(ev);
 
         $('#calendar').fullCalendar('renderEvent', ev);
-
+        resetAssignmentModal();
     });
 
 	$('#calendar').fullCalendar({

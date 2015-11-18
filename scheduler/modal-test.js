@@ -23,3 +23,11 @@ $('#classButton').on('click', function () {
 $('#assignmentButton').on('click', function () {
 	$('#assignmentModal').modal();
 });
+
+$('#classSubmit').on('click', function () {
+	$('#classModal').modal('hide');
+});
+
+$('#assignSubmit').on('click', function () {
+	$('#assignmentModal').modal('hide');
+});

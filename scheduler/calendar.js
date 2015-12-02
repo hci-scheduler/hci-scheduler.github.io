@@ -92,12 +92,12 @@ $('#classSubmit').on('click', function() {
             var tmpStart = '';
             var tmpEnd = '';
             if (i == 0) {
-                tmpStart = moment(startDate + ' ' + startTime, dateFormatString).toISOString();
-                tmpEnd = moment(startDate + ' ' + endTime, dateFormatString).toISOString();
+                tmpStart = moment(startDate + ' ' + startTime, dateFormatString).format();
+                tmpEnd = moment(startDate + ' ' + endTime, dateFormatString).format();
             }
             else if (i == 1) {
-                tmpStart = moment(endDate + ' ' + startTime, dateFormatString).toISOString();
-                tmpEnd = moment(endDate + ' ' + endTime, dateFormatString).toISOString();
+                tmpStart = moment(endDate + ' ' + startTime, dateFormatString).format();
+                tmpEnd = moment(endDate + ' ' + endTime, dateFormatString).format();
             }
             var ev = {
                 id: courseName,
@@ -129,8 +129,8 @@ $('#classSubmit').on('click', function() {
                     var ev = {
                         id: courseName,
                         title: courseName,
-                        start: tmpDate.toISOString(),
-                        end: moment(tmpDate).hour(parts[0]).minute(parts[1]).toISOString(),
+                        start: tmpDate.format(),
+                        end: moment(tmpDate).hour(parts[0]).minute(parts[1]).format(),
                         campusLoc: $('#locationInput').val(),
                         professor: $('#professorInput').val(),
                         professorEmail: $('#professorEmailInput').val(),

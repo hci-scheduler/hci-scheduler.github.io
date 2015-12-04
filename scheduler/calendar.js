@@ -1,3 +1,4 @@
+var dateFormatString = 'MM/DD/YYYY h:mm a';
 var events = [];
 
 $(function () {
@@ -8,16 +9,13 @@ $(function () {
 		todayHighlight: true
 	});
 	$('#dueDatePicker').datepicker({
-		format: 'yyyy-mm-dd',
 		todayHighlight: true
 	});
 	$('#reminderDatePicker').datepicker({
-		format: 'yyyy-mm-dd',
 		todayHighlight: true
 	});
 
 	$('#calendar').fullCalendar({
-        editable: true,
         eventLimit: true,
         events: events
 	});
@@ -28,7 +26,7 @@ $('#classSubmit').on('click', function() {
     var classEvents = [];
     var dayArray = new Array();
     var courseName = $('#courseNameInput').val();
-    var startTime = $('#startTimeHourSelect').val() + ':' +$('#startTimeMinuteSelect').val();
+    var startTime = $('#startTimeHourSelect').val() + ':' + $('#startTimeMinuteSelect').val();
     var startAm = $('#startAmRadio').prop('checked');
     var startPm = $('#startPmRadio').prop('checked');
     if (!startAm && !startPm) {
@@ -61,7 +59,6 @@ $('#classSubmit').on('click', function() {
     var startDate = $('#startDatePicker').val();
     var endDate = $('#endDatePicker').val();
     
-    var dateFormatString = 'MM/DD/YYYY h:mm a';
     var startMoment = moment(startDate + ' ' + startTime, dateFormatString);
     var endMoment = moment(endDate + ' ' + endTime, dateFormatString);
 
@@ -108,7 +105,8 @@ $('#classSubmit').on('click', function() {
                 professor: $('#professorInput').val(),
                 professorEmail: $('#professorEmailInput').val(),
                 website: $('#classWebsiteInput').val(),
-                description: $('#courseDescriptionTextArea').val()
+                description: $('#courseDescriptionTextArea').val(),
+                editable: false
             };
             classEvents.push(ev);
         }
@@ -135,7 +133,8 @@ $('#classSubmit').on('click', function() {
                         professor: $('#professorInput').val(),
                         professorEmail: $('#professorEmailInput').val(),
                         website: $('#classWebsiteInput').val(),
-                        description: $('#courseDescriptionTextArea').val()
+                        description: $('#courseDescriptionTextArea').val(),
+                        editable: false
                     };
                     classEvents.push(ev);
                 }
@@ -152,7 +151,7 @@ $('#classSubmit').on('click', function() {
     var eventObj = {
         events: classEvents,
         color: 'red'
-    }
+    };
     
     $('#courseSelect').append('<option value=' + courseName +'>' + courseName + '</option>');
     $('#calendar').fullCalendar('addEventSource', eventObj);
@@ -161,22 +160,73 @@ $('#classSubmit').on('click', function() {
 
 //TODO: handling class addition
 $('#assignSubmit').on('click', function() {
+    var assignmentEvents = [];
     var assignmentName = $('#assignmentNameInput').val();
-
-    var dueDate = $('#dueDatePicker').val() + 'T' + $('#timeDueHourInput').val() + ':' + $('#timeDueMinuteInput').val() + ':00';
-    console.log(dueDate);
-
-    var ev = {
+    var timeDue = $('#timeDueHourSelect').val() + ':' + $('#timeDueMinuteSelect').val();
+    var dueAm = $('#timeDueAmRadio').prop('checked');
+    var duePm = $('#timeDuePmRadio').prop('checked');
+    if (!dueAm && !duePm) {
+        alert('You must select am or pm for your time due');
+        return;
+    }
+    else {
+        if (dueAm) {
+            timeDue += ' am'
+        }
+        else if (duePm) {
+            timeDue += ' pm';
+        }
+    }
+    var dueDate = $('#dueDatePicker').val();
+    if (dueDate == '') {
+        alert('You must select a due date');
+        return;
+    }
+    
+    var reminderDate = $('#reminderDatePicker').val();
+    if (reminderDate != '') {
+        var reminderTime = $('#reminderHourSelect').val() + ':' + $('#reminderMinuteSelect').val();
+        var reminderAm = $('#reminderAmRadio').prop('checked');
+        var reminderPm = $('#reminderPmRadio').prop('checked');
+        if (!reminderAm && !reminderPm) {
+            alert('You have selected a reminder date so you must select am or pm for your reminder time');
+            return;
+        }
+        else {
+            if (reminderAm) {
+                reminderTime += ' am';
+            }
+            else if (reminderPm) {
+                reminderTime += ' pm';
+            }
+        }
+        var reminderMoment = moment(reminderDate + ' ' + reminderTime, dateFormatString);
+        var evReminder = {
+            id: assignmentName,
+            title: 'Reminder for ' + assignmentName,
+            start: reminderMoment.format(),
+            end: reminderMoment.format(),
+            editable: false
+        };
+        assignmentEvents.push(evReminder);
+    }
+    
+    var dueMoment = moment(dueDate + ' ' + timeDue, dateFormatString);
+    var evDue = {
         id: assignmentName,
         title: assignmentName,
-        start: dueDate,
-        color: 'blue',
-        stick: true
+        start: dueMoment.format(),
+        end: dueMoment.format(),
+        assignmentDetails: $('#assignmentDetailsTextArea').val(),
+        editable: false
     };
-
-    console.log(ev);
-
-    $('#calendar').fullCalendar('renderEvent', ev);
+    assignmentEvents.push(evDue);
+    var eventObj = {
+        events: assignmentEvents,
+        color: 'blue'
+    };
+    
+    $('#calendar').fullCalendar('addEventSource', eventObj);
     resetAssignmentModal();
 });
 
@@ -226,8 +276,8 @@ function resetAssignmentModal() {
 	$('#courseSelect').val('');
 	$('#assignmentNameInput').val('');
 	$('#dueDatePicker').val('');
-	$('#timeDueHourInput').val('');
-	$('#timeDueMinuteInput').val('');
+	$('#timeDueHourSelect').val('0');
+	$('#timeDueMinuteSelect').val('00');
 	$('#timeDueAmRadio').prop('checked', false);
 	$('#timeDuePmRadio').prop('checked', false);
 	$('#assignmentDetailsTextArea').val('');

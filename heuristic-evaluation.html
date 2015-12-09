@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">Schedule Squid</a>
+			</div>
+			
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="scheduler/login.html">Scheduler</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Previous Documents <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="project-proposal.html">P1 - Project Proposal</a></li>
+							<li><a href="requirements-analysis.html">P2 - Requirements Analysis</a></li>
+							<li><a href="conceptual-design.html">P3 - Conceptual Design</a></li>
+							<li><a href="design-sketches.html">P4 - Design Sketches</a></li>
+							<li><a href="paper-prototyping.html">P5 - Paper Prototyping</a></li>
+							<li><a href="heuristic-evaluation.html">P7 - Heuristic Evaluation</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<h1 class="text-center">Schedule Squid</h1>
+		<h1 class="text-center"><small>A class scheduler that doubles as a homework planner.</small></h1>
+		<h2>Corrected Changes</h2>
+		<h3>Feedback</h3>
+		<p>
+			When putting in times there should not be an option of 12AM in your drop down menu if you are going to give radio buttons that indicate am/pm. It is inconsistent and confusing.
+		</p>
+		<p>
+			If you try to create a class without specifying which days of the week it is, it doesn’t throw an error on creation, instead it completes the form but nothing comes up on the calendar. Heuristic: Error prevention, External Consistency
+		</p>
+		<p>
+			Error Prevention: Currently, no added courses or assignments are persistent, meaning that if I navigate to and from any other month on the calendar, my registered content disappears. While this will likely be taken care of in Beta, I recommend some sort of error message when things such as this happen.
+		</p>
+		<h3>Resolution</h3>
+		<p>
+			The three above issues were fixed by improving adding classes to the scheduler. When adding a class the the scheduler will properly follow the repeated days of the week as specified. Classes also persist when scrolling through the calendar as well.
+		</p>
+		<h3>Feedback</h3>
+		<p>
+			It’s kind of confusing why the homepage doesn’t have the scheduler on it, but rather points to where it can be found. What purpose is the home page serving? Heuristic: External Consistency
+		</p>
+		<h3>Resolution</h3>
+		<p>
+			Our homepage usually displays the reports for the project assignments. For our real product we would have the scheduler be directly on the homepage.
+		</p>
+		<h2>Good Feedback</h2>
+		<p>
+			All the information you can add to the course and assignments are useful and pertinent.
+		</p>
+		<p>
+			The calendar view and the pop up for adding a class and course are good ways to treat them because they are standard ways of viewing these actions.
+		</p>
+		<p>
+			Right from the beginning I love the simplicity. The login page has good text boxes, the app immediately has a feeling of simplicity, minimalism, and friendliness.
+		</p>
+		<p>
+			Once I got to the home page after logging in, I really liked the simplistic vibe of the app. All the labels seemed to be very straightforward. This was good and made learnability easy.
+		</p>
+		<p>
+			I appreciated that you gave the option to increase the size of the text box for course description. This would be a convenient feature for a more technologically savvy student or for someone who has a long course description. Very convenient for expert users who may use that section to put a lot of information.
+		</p>
+		<p>
+			I enjoy how the entries are small and don't take up the whole height of the date box. This is a good minimalistic design feature. All the important information about an assignment is there that you need to see right away - the name of the assignment and the due date.
+		</p>
+		<p>
+			Overall great app and super useful for students. I think it’s usable, easy to learn how to use, and a great start. If you're interested in building this out more, check out myedu.com. They have a great calendar scheduler which may have some features that would be useful for this kind of app as well. Please let me know if anything there is confusing as I would be happy to explain them further to you.
+		</p>
+		<p>
+			Minimalist Design: I really like how the window-space in the application is not crowded at all. The number of buttons (and bells and whistles) on the pages are very manageable, from the home screen to adding a class to adding an assignment.
+		</p>
+		<p>
+			User Control: It’s great how you only use a form for adding a class or an assignment. Having the ability to click-out or ESC-out at any point when adding content is a very nice touch, rather than having to navigate between web pages.
+		</p>
+		<p>
+			Consistency: All labeling of buttons is solid - I have no questions about what each drop-down box does or where each button will take me. Very good job on this part.
+		</p>
+		<p>
+			Aesthetic and Minimalist Design: I love the color scheme of your piece as well as your minimal design. It is very modern and simple to make things easy for a person to just get the task done. There is not a lot going on within the page which allows the user to be focused and less distracted. Also, the colors are not distracting at all since it is just black and white with a hint of colors.
+		</p>
+		<p>
+			I like the idea of the “today” button. It allows room for a person to plan ahead while being able to go back to the date and time of the day we are on. Though I was half expecting it to open a calendar of today’s events but nothing showed up. Took me a second to ﬁgure it out but none the less it is actually quite fascinating.
+		</p>
+		<h2>Unresolved Feedback</h2>
+		<h3>Cosmetic</h3>
+		<p>
+			When starting the first task I hit Add a Class I was prompted with a modal. Immediately I noticed the Time section. In the dropdown menu there was AM and PM and then again on the side there were am and pm radio buttons. This was confusing and could very easily cause errors. I would try to be a little bit more consistent here, but overall it's just a cosmetic issue.
+		</p>
+		<p>
+			For the more experienced or expert user I wish I was able to choose the color of the entry on the calendar because the default colors are kind of bright and not my personal taste. This could be the case for other users as well and would be a useful cosmetic addition to the app.
+		</p>
+		<p>
+			I found that the layout of the page in general was simplistic, however could use a little bit of a face lift. I would recommend rearranging the layout, making the calendar bigger and making the options to add things stand out a bit more. Maybe use some kind of icon or button to do this. These are just cosmetic suggestions.
+		</p>
+		<p>
+			Aesthetic: The logo at the top is also very cute! The only recommendation I have for it would be to make it a touch bigger and to maybe consider swapping its position with the Add a Class/Assignment widget (more on that below).
+		</p>
+		<p>
+			Layout: I recommend swapping the Schedule Squid logo and the Add Content widget, simply on aesthetic preference. I like how other calendar applications keep that widgets on top of the calendar page, rather than on the side - it makes the application much more usable and responsive to smaller resolutions in my opinion.
+		</p>
+		<h3>Minor</h3>
+		<p>
+			When you are specifying a time for the course the hour dropdown includes the AM/PM, but you also have radio buttons on the side for AM/PM. Right now, I'm blanking a bit on how people usually enter minutes, but having to scroll through 60 minutes to get to the one you need seems weird. Maybe because when I see a dropdown like that I'm used to that being the input for a calendar day and it felt weird when I scrolling at it when past 31 (the max number of days in a month). Usability Heuristic: Consistency
+		</p>
+		<p>
+			Input for time on the add a course vs. add an assignment are different. Usability Heuristic: Consistency
+		</p>
+		<p>
+			For Task 1, I didn't know how where to add the information about the books. Was I supposed to add it to the course description? For some reason I just equate that to the description of the course you get from the NEU course registration page. Usability Heuristic: Speaking the user's language
+		</p>
+		<p>
+			When I was inputting a date for the start and end date of a course, I messed up and instead of using the calendar pop-up, I wanted to type in the date manually. I didn't know what format it was to go in (month/day/year or year/month/day, etc.) and ended up messing it up even more. Could be handy to know what format the date goes in. Usability Heuristic: Visibility of system status
+		</p>
+		<p>
+			An edit function for changing things in a course or assignment would be useful. Usability Heuristic: User Control and Freedom
+		</p>
+		<p>
+			The instructions were a bit vague about the login page. I was confused as to how to log in. I eventually realized that I could just put in my email and a random password and press login and it would work. As a test user I would have appreciated more information about this in the brief (or not include it in the first iteration). Still liked it though!
+		</p>
+		<p>
+			In the middle of inputting the data, I was going back and forth with the task instructions and when I clicked back onto the app, outside the modal, the modal closed. I did find that when I clicked on Add a Class again that the information had auto saved, which is good however I believe that there should not be a way for you to click outside of the modal and for it to close. This could cause some errors and confusion for the user. The user may also get frustrated if they hit the background by accident. This is just a minor issue.
+		</p>
+		<p>
+			When adding an assignment, I found a consistency error with entering the time an assignment was due. In the "Add a Class" there was a drop down and then here there was a type in option. I think the dropdown is a better choice in order to prevent type errors. My first time trying to add an assignment I messed it up and the assignment didn't show up. This is a minor error but definitely important in order to help with the overall learnability of the software.
+		</p>
+		<p>
+			When selecting dates for the start and end date of a class, the days don’t look like they are clickable (there’s just a text select cursor on mouse over) Heuristic: External Consistency, Visibility
+		</p>
+		<p>
+			When creating an assignment, the field to enter the time it is due is confusing. Usually it would be a drop down with 15 minute increments. Heuristic: External Consistency
+		</p>
+		<p>
+			It’s kind of confusing to have an assignment view and a class view under “Content view”, most calendars show all of your appointments / classes (and then allow you to filter via checkboxes or something) Heuristic: External Consistency, Visibility
+		</p>
+		<p>
+			Ease-of-Use: The forms for both adding a class and adding an assignment are both great - nothing in question whatsoever and very straight-forward. I would consider adding an (optional) “Notes” section to both forms so users can freely enter other data to a class or assignment as they wish.
+		</p>
+		<p>
+			Help and Documentation: a prompt would be great! There really is no helping-text or introductory text on the Scheduler page. Users would greatly benefit from a small welcome message to help get them started. Sure, most people know how to use a calendar application, but it still helps it look more professional.
+		</p>
+		<p>
+			Error Recovery: Although it is a small change, maybe have an “Undo Last” button in order to help users quickly remove a class or assignment that was last added. Users cannot add or remove classes/assignments at this point as well, as far as I can tell.
+		</p>
+		<p>
+			I love the little squid. It is cute at the same time not distracting such that a person notices it but doesn’t waste too long looking at it. Though I do wish you had the name of your application underneath it because I had to look it up again to ﬁnd out.
+		</p>
+		<p>
+			There is a slight border over the squid that doesn’t look to be intentional. It has these two grey lines on top and to the left of it. It is kind of throws off the clean and sleek view of the application even if it a very small detail.
+		</p>
+		<h3>Major</h3>
+		<p>
+			The Content View and Calendar View buttons are not implemented yet. That would be useful to have. Usability Heuristic: Speaking the user's language
+		</p>
+		<p>
+			For Task 2, when I added the assignment, it didn't show up on that date. (After clicking around, it seems it might because it didn't add an assignment due on a previous date. Since we are now past October 2015. Maybe it should throw an error if you're scheduling for a past date.) Usability Heuristic: Visibility of system status
+		</p>
+		<p>
+			Couldn't do task 3, since I don't think it was saving anything in an account login. You probably haven't had the time to implement that yet, but that would be useful to have for the task.
+		</p>
+		<p>
+			The courses and assignments that appear on the calendar aren't clickable. Again, this is probably just not implemented yet, but definitely would be very useful.
+		</p>
+		<p>
+			Once the class was added into the schedule I was not able to click on the class and get any of the information that I entered. This functionality may be in development, however if it is not then I would either suggest that it be made or minimize the input information options to reduce the information load for the user. I would say this is a major issue depending on what your end goal is for the intended use of this app.
+		</p>
+		<p>
+			The Calendar view button doesn’t change the view from month to week or day. Heuristic: User control, Visibility of System Status
+		</p>
+		<p>
+			Classes in the schedule are clickable but nothing happens when you click them. Heuristic: External Consistency
+		</p>
+		<p>
+			Moving one class to another day moves every class over by the same increment Heuristic: External Consistency
+		</p>
+		<p>
+			If you add a class with a start date after its end date, there’s no error thrown. Heuristic: External Consistency, Visibility of System Status
+		</p>
+		<p>
+			Visibility of Status: I would like to be able to alter the color of a course or assignment that I’ve added to the calendar - once a good amount of content has been added to the scheduler, the calendar becomes pretty difficult to read with so much red on the screen.
+		</p>
+		<p>
+			Error Prevention: When adding an assignment, the user should not be able to input any String for a Due Date time. There should maybe be a drop-down box here, just as is used in the Add a Course form. Furthermore, on the Add a Course form, there are AM and PM buttons on the form despite a drop-down box of timeslots being used - slots which include AM and PM themselves, therefore making the AM and PM buttons unnecessary.
+		</p>
+		<p>
+			I am confused as to what to do since I have neither signed up for the program so I do not have an account nor do I have access to one. You should have a registration button even if it doesn’t lead to anywhere since I did not know what email or password to use to access the website. As a ﬁrst time user there should be a way to become a user.
+		</p>
+		<p>
+			I wish there was an option to open a day by day calendar to get more of a look at the hours in the day because it is also important to plan what you will try to ﬁnish by when that day and get a sense of it on the screen since you have an option of adding assignments.
+		</p>
+		<p>
+			The calendar view and course view does nothing. I should at least be able to see what a weekly and daily calendar look like even if I cannot edit, add or change anything within them. I do not know how they are set up or how useful each would be.
+		</p>
+		<p>
+			There is no error prevention or an escape path for the user to ﬁx any mistakes he or she made with adding an assignment or class. There is nowhere that you ask the user if they are sure they want to add this course and/or assignment to their schedule as well as an editing option for the given course.
+		</p>
+		<h3>Catastrophic</h3>
+		<p>
+			There doesn’t seem to be any way to edit the time of an already created class Heuristic: External Consistency
+		</p>
+		<p>
+			If you create classes in November and then go to December and then come back, all of the classes are gone Heuristic: External Consistency, Visibility of System Status
+		</p>
+		<p>
+			Assignments don’t seem to show up on the calendar Heuristic: External Consistency, Visibility of System Status
+		</p>
+		<p>
+			When adding a class, it doesn’t matter when the start and end date are, it fills the calendar no matter what. Heuristic: External Consistency, Visibility of System Status
+		</p>
+		<p>
+			If you add a class on a Saturday or Sunday, it won’t show up on those days Heuristic: External Consistency, Visibility of System Status
+		</p>
+		<p>
+			I cannot open the course information when I click on the course. This is inconsistent and confusing since you made me enter all this information that I cannot gain access to. I should be able to look at the course details somewhere if not by double clicking the course title.
+		</p>
+		<p>
+			I refresh the page and all my courses that I scheduled are gone but when I go to put a new assignment it gives me the list of the deleted courses to pick from. That is very confusing because if it is deleted in the calendar it should be deleted everywhere else. Or you should at least have the fake courses up until the user closes the application.
+		</p>
+		<p>
+			I tried adding an assignment but nothing happened. No image of it being on my schedule nor on the side to view assignment. I feel like I did something wrong cause the application stopped working since my added course disappeared and the assignment I added is nowhere to be found. 
+		</p>
+	</div>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

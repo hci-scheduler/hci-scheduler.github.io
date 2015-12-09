@@ -17,7 +17,8 @@ $(function () {
 
 	$('#calendar').fullCalendar({
         eventLimit: true,
-        events: events
+        events: events,
+        eventClick: calendarEventClick
 	});
 });
 
@@ -106,6 +107,7 @@ $('#classSubmit').on('click', function() {
                 professorEmail: $('#professorEmailInput').val(),
                 website: $('#classWebsiteInput').val(),
                 description: $('#courseDescriptionTextArea').val(),
+                type: 'class',
                 editable: false
             };
             classEvents.push(ev);
@@ -134,6 +136,7 @@ $('#classSubmit').on('click', function() {
                         professorEmail: $('#professorEmailInput').val(),
                         website: $('#classWebsiteInput').val(),
                         description: $('#courseDescriptionTextArea').val(),
+                        type: 'class',
                         editable: false
                     };
                     classEvents.push(ev);
@@ -206,6 +209,7 @@ $('#assignSubmit').on('click', function() {
             title: 'Reminder for ' + assignmentName,
             start: reminderMoment.format(),
             end: reminderMoment.format(),
+            type: 'assignment',
             editable: false
         };
         assignmentEvents.push(evReminder);
@@ -218,6 +222,7 @@ $('#assignSubmit').on('click', function() {
         start: dueMoment.format(),
         end: dueMoment.format(),
         assignmentDetails: $('#assignmentDetailsTextArea').val(),
+        type: 'assignment',
         editable: false
     };
     assignmentEvents.push(evDue);
@@ -230,11 +235,83 @@ $('#assignSubmit').on('click', function() {
     resetAssignmentModal();
 });
 
+function calendarEventClick(calEvent, jsEvent, view) {
+    if (calEvent.type == 'class') {
+        editClass(calEvent);
+        $('#classModal').modal();
+    }
+    else if (calEvent.type == 'assignment') {
+        editAssignment(calEvent);
+        $('#assignmentModal').modal();
+    }
+}
+
+function editClass(event) {
+    var startMoment = event.start;
+    var endMoment = event.end;
+    $('#courseNameInput').val(event.title);
+    var startHour = parseInt(startMoment.format('h'));
+    var endHour = parseInt(endMoment.format('h'));
+    if (startHour == 12) {
+        startHour = 0;
+    }
+    if (endHour == 12) {
+        endHour = 0;
+    }
+	$('#startTimeHourSelect').val(startHour.toString());
+	$('#startTimeMinuteSelect').val(startMoment.format('mm'));
+    if (startMoment.format('a') == 'am') {
+        $('#startAmRadio').prop('checked', true);
+    }
+	else {
+        $('#startPmRadio').prop('checked', true);
+    }
+	$('#endTimeHourSelect').val(endHour.toString());
+	$('#endTimeMinuteSelect').val(endMoment.format('mm'));
+    if (endMoment.format('a') == 'am') {
+        $('#endAmRadio').prop('checked', true);
+    }
+	else {
+        $('#endPmRadio').prop('checked', true);
+    }
+	$('#startDatePicker').val(startMoment.format('MM/DD/YYYY'));
+	$('#endDatePicker').val(endMoment.format('MM/DD/YYYY'));
+	$('#locationInput').val(event.campusLoc);
+	$('#professorInput').val(event.professor);
+	$('#professorEmailInput').val(event.professorEmail);
+	$('#classWebsiteInput').val(event.website);
+	$('#courseDescriptionTextArea').val(event.description);
+    $('#classSubmit').prop('disabled', true);
+}
+
+function editAssignment(event) {
+    var startMoment = event.start;
+    var startHour = parseInt(startMoment.format('h'));
+    if (startHour == 12) {
+        startHour = 0;
+    }
+    $('#courseSelect').val(event.title);
+	$('#assignmentNameInput').val(event.title);
+	$('#dueDatePicker').val(startMoment.format('MM/DD/YYYY'));
+	$('#timeDueHourSelect').val(startHour.toString());
+	$('#timeDueMinuteSelect').val(startMoment.format('mm'));
+    if (startMoment.format('a') == 'am') {
+        $('#timeDueAmRadio').prop('checked', true);
+    }
+	else {
+        $('#timeDuePmRadio').prop('checked', true);
+    }
+	$('#assignmentDetailsTextArea').val(event.assignmentDetails);
+    $('#assignSubmit').prop('disabled', true);
+}
+
 $('#classButton').on('click', function () {
+    $('#classSubmit').prop('disabled', false);
 	$('#classModal').modal();
 });
 
 $('#assignmentButton').on('click', function () {
+    $('#assignSubmit').prop('disabled', false);
 	$('#assignmentModal').modal();
 });
 
@@ -270,6 +347,7 @@ function resetClassModal() {
 	$('#professorEmailInput').val('');
 	$('#classWebsiteInput').val('');
 	$('#courseDescriptionTextArea').val('');
+    $('#classSubmit').prop('disabled', false);
 }
 
 function resetAssignmentModal() {
@@ -286,6 +364,7 @@ function resetAssignmentModal() {
 	$('#reminderMinuteSelect').val('00');
 	$('#reminderAmRadio').prop('checked', false);
 	$('#reminderPmRadio').prop('checked', false);
+    $('#assignSubmit').prop('disabled', false);
 }
 
 function convertTimeStandard(str) {
